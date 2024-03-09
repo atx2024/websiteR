@@ -3,17 +3,42 @@ project:
 
 website:
   title: "websiteR"
+  page-navigation: true
+  bread-crumbs: true
+  search:
+    show-item-context: true
+    type: overlay
   navbar:
+    background: light
+    title: WebsiteR
+    collapse-below: lg
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about.qmd
+
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
     toc: true
+    theme:
+      light: [cosmo, theme-dark.scss]
+    code-copy: true
+    code-overflow: wrap
+    css: styles.css
+    include-after-body: js.html
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px
+
+
+
+
+
+freeze: true
 
 editor: visual
+
 
